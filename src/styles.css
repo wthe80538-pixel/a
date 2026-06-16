@@ -1,0 +1,19 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #071014;
+  color: #eef8e8;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+
+#game { width: 100vw; height: 100vh; display: block; background: #071014; }
+
+#hud { position: fixed; inset: 18px auto auto 18px; padding: 14px 16px; min-width: min(520px, calc(100vw - 36px)); background: rgba(5, 12, 14, .64); border: 1px solid rgba(194, 255, 183, .24); border-radius: 18px; box-shadow: 0 18px 60px rgba(0,0,0,.28); backdrop-filter: blur(10px); pointer-events: none; }
+.brand { font-weight: 900; letter-spacing: .08em; text-transform: uppercase; color: #d9ffad; margin-bottom: 8px; }
+.stats { display: grid; grid-template-columns: repeat(4, max-content); gap: 12px; font-weight: 800; }
+.help { margin-top: 8px; color: #b8d6c6; font-size: 13px; }
+#game-over { position: fixed; inset: 50% auto auto 50%; transform: translate(-50%, -50%); text-align: center; padding: 32px 42px; background: rgba(8, 12, 18, .82); border: 1px solid rgba(255,255,255,.24); border-radius: 24px; box-shadow: 0 24px 90px rgba(0,0,0,.44); }
+#game-over h1 { margin: 0 0 10px; color: #ffd37e; }

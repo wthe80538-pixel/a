@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs",
+    "build": "node --check src/main.js && node --check server.mjs"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
