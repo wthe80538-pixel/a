@@ -1,32 +1,27 @@
-# 台灣股票分析器 MVP
+# Wildlight Survivors
 
-## 如何執行
-1. 安裝套件：
+A from-scratch 2D survival game rendered with WebGL. Explore the wild, gather wood and berries, fight off creatures, and survive the night cycle as long as possible.
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+## Controls
 
-2. 下載 2330.TW 最近 3 年日線 OHLCV 資料：
+- **WASD / Arrow keys**: Move
+- **Mouse**: Aim
+- **Click**: Strike, gather resources, and fight enemies
+- **R**: Restart after game over
 
-   ```bash
-   python src/data/download_price.py
-   ```
+## Rendering
 
-3. 建立基礎特徵資料（含 5 日報酬目標欄位）：
+The game uses a WebGL canvas with anti-aliasing enabled through the context options. The main loop is driven by `requestAnimationFrame`, allowing the browser to synchronize rendering for smooth 60fps animation on capable displays.
 
-   ```bash
-   python src/features/build_features.py
-   ```
+## Run locally
 
-4. 訓練第一版 baseline 模型（RandomForestClassifier）：
+```bash
+npm install
+npm run dev
+```
 
-   ```bash
-   python src/models/train_model.py
-   ```
+## Build
 
-5. 執行簡易回測（僅使用後 20% 測試區間）：
-
-   ```bash
-   python src/backtest/simple_backtest.py
-   ```
+```bash
+npm run build
+```
